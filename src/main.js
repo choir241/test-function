@@ -8,21 +8,20 @@ export default async ({ req, res, log, error }) => {
   //    .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
   //    .setKey(process.env.APPWRITE_API_KEY);
 
-  // You can log messages to the console
-  log('Hello, Logs!');
-
-  // If something goes wrong, log an error
-  error('Hello, Errors!');
-
   // The `req` object contains the request data
   if (req.method === 'POST') {
     // Send a response with the res object helpers
     // `res.send()` dispatches a string back to the client
     log(req.body)
+    log("-----")
     log(req.bodyRaw)
+    log("-----")
     log(req.bodyText)
+    log("-----")
     log(req.bodyJson)
+    log("-----")
     log(req.bodyBinary)
+    log("-----")
 
     log(res.send)
     log(res.text)

@@ -18,6 +18,18 @@ export default async ({ req, res, log, error }) => {
   if (req.method === 'GET') {
     // Send a response with the res object helpers
     // `res.send()` dispatches a string back to the client
+    log(req.body)
+    log(req.bodyRaw)
+    log(req.bodyText)
+    log(req.bodyJson)
+    log(req.bodyBinary)
+
+    log(res.send)
+    log(res.text)
+    log(res.binary)
+    log(res.json)
+    log(res.empty)
+    log(res.redirect)
     return res.send('Hello, World!');
   }
 

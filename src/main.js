@@ -15,7 +15,7 @@ export default async ({ req, res, log, error }) => {
   error('Hello, Errors!');
 
   // The `req` object contains the request data
-  if (req.method === 'GET') {
+  if (req.method === 'POST') {
     // Send a response with the res object helpers
     // `res.send()` dispatches a string back to the client
     log(req.body)
